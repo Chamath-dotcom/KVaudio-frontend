@@ -1,6 +1,6 @@
 export default function Header(){
     return(
-        <header className=" rounded-[30px] border-2 w-[calc(100vw-20vw)] h-[8.2vh] flex justify-between items-center m-2">
+        <header className=" rounded-[30px] border-2 w-[calc(100vw-20vw)] h-[8.2vh] flex justify-between items-center  relative z-10">
             <div className=" w-[40vw] h-[8.2vh] flex items-center object-cover">
                 <img src="./logo.svg" alt="logo" className="object-cover ml-[20px] "/>
             </div>
