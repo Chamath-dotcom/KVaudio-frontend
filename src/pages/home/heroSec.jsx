@@ -11,7 +11,7 @@ export default function Hero(){
                     <h1>Perfect Sound</h1>
                     <h1>Every Time</h1>   
                 </div>
-            <div className='discription  w-[54vw] h-[59vh] flex text-end items-end text-[#ffffff] bg-[#00000059] pr-[15px] pb-[3%]'>
+            <div className='discription  w-[58vw] h-[59vh] flex text-end items-end text-[#ffffff] bg-[#00000059] pl-[10px] pr-[15px] pb-[3%]'>
                <h1>Our wide range of audio equipment ensures perfect sound for any event. No matter the size, we have the right solutions to make your experience seamless.</h1>
             </div>
             </div>
