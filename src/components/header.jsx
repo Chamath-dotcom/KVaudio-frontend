@@ -1,3 +1,5 @@
+
+
 export default function Header(){
     return(
         <header className=" rounded-[30px] border-2 w-[calc(100vw-20vw)] h-[8.2vh] flex justify-between items-center  relative z-10">
