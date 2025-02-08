@@ -1,9 +1,10 @@
 import Header from "../../components/header";
 import './hero.css';
+import LoginBtn from "./loginBtn/loginBtn";
 
 export default function Hero(){
     return(
-        <div className=" flex flex-col justify-center items-center  ">
+        <div className=" flex flex-col justify-center items-center relative ">
         <Header/>
         <div className="main w-[95vw] h-[59vh]  flex justify-center rounded-[20px] bg-[#0B080A] ">
             <div className='img-div rounded-[20px] flex items-center justify-between '>
@@ -16,7 +17,7 @@ export default function Hero(){
             </div>
             </div>
 
-
+        <LoginBtn/>
         </div>
         </div>
     )
