@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AdminPage from './pages/admin/adminPage';
 import HomePage from './pages/home/homePage';
 import Login from './pages/login/login';
+import { Toaster } from 'react-hot-toast';
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
 
   return (
     <BrowserRouter>
-
+      <Toaster/>
       <Routes path='/*'>
         <Route path='/admin/*' element={<AdminPage/>}/>
         <Route path='/' element={<HomePage/>}/>
