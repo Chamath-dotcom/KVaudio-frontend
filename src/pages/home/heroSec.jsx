@@ -16,8 +16,9 @@ export default function Hero(){
                <h1>Our wide range of audio equipment ensures perfect sound for any event. No matter the size, we have the right solutions to make your experience seamless.</h1>
             </div>
             </div>
-
-        <LoginBtn/>
+        <div className="absolute bottom-50 left-20">
+            <LoginBtn/>
+        </div>
         </div>
         </div>
     )

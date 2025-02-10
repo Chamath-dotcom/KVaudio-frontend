@@ -1,12 +1,17 @@
+import { useNavigate } from 'react-router-dom'
 import'./loginBtn.css'
 
 export default function LoginBtn(){
+    const navigate=useNavigate();
+    const goLogin=()=>{
+        navigate('/login')
+    }
     return(
-        <div className='absolute bottom-25 left-15 w-[20vw] h-[10vh]'>
-        <a className='rounded-2xl' >
+        <div >
+        <button className='rounded-2xl ' onClick={goLogin} >
             <span>LOGIN</span>
             <div className="wave "></div>
-        </a>
+        </button>
         </div>
     )
 }

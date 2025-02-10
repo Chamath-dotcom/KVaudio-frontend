@@ -1,3 +1,4 @@
+import LoginBtn from "../home/loginBtn/loginBtn";
 import "./login.css";
 export default function Login(){
     return(
@@ -29,15 +30,9 @@ export default function Login(){
                             placeholder="Password"
                             className="w-[25vw] h-[5vh]
                         mt-6 bg-transparent border-b-2 border-white text-white text-xl outline-none"
-                           
-                           
                         />
-
-                        <div className="w-[20vw] h-[10vh]  flex justify-center items-center absolute bottom-10">
-                            <button className="rounded-2xl">
-                                <span>LOGIN</span>
-                                <div className="wave"></div>
-                            </button>
+                        <div className="w-[15vw] h-[6vh]  flex justify-start absolute bottom-10">
+                            <LoginBtn/>
                         </div>
                     </div>
                     </form>
