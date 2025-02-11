@@ -3,11 +3,13 @@ import LoginBtn from "../home/loginBtn/loginBtn";
 import "./login.css";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 export default function Login(){
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
     function handleOnSubmit(e) {
         e.preventDefault();
@@ -21,6 +23,12 @@ export default function Login(){
             }).then((res)=>{
                 console.log(res);
                 toast.success("login successful");
+                const user = res.data.user
+                if(user.role === "admin"){
+                    navigate('/admin');
+                }else{
+                    navigate('/');
+                }
             }).catch((err)=>{
                 console.log(err);
                 toast.error(err.response.data.error);
