@@ -4,10 +4,12 @@ import { MdDashboard, MdPowerSettingsNew } from "react-icons/md";
 import { FaSwatchbook, FaUsers } from "react-icons/fa";
 import { BiSolidSpeaker } from "react-icons/bi";
 import "./admin.css"
+import AdminItem from "./adminItem";
+import AddItem from "./additem";
 
 export default function AdminPage() {
   return (
-    <div className="w-full h-screen flex ">
+    <div className="w-full h-screen flex overflow-hidden">
       <div className="w-[4vw] h-full  flex flex-col justify-start  items-center text-[20px] gap-3 backdrop-blur-md">
 
         <Link to="/admin/dashboard" className="mt-6 " data-tooltip-id="dashboard-tooltip">
@@ -52,8 +54,8 @@ export default function AdminPage() {
         <Routes>
           <Route path="/dashboard" element={<h1>Dashboard</h1>} />
           <Route path="/bookings" element={<h1>Bookings</h1>} />
-          <Route path="/items" element={<h1>Items</h1>} />
-          <Route path="/items/add" element={<h1>Add Item</h1>} />
+          <Route path="/items" element={<AdminItem/>} />
+          <Route path="/items/add" element={<AddItem/>} />
           <Route path="/items/edit" element={<h1>Edit Item</h1>} />
           <Route path="/users" element={<h1>Users</h1>} />
         </Routes>

@@ -17,7 +17,7 @@ export default function Hero(){
             </div>
             </div>
         <div className="absolute bottom-50 left-20">
-            <LoginBtn/>
+            <LoginBtn text="LOGIN"/>
         </div>
         </div>
         </div>
