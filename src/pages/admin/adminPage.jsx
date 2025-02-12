@@ -3,36 +3,36 @@ import { Link, Route, Routes } from "react-router-dom";
 import { MdDashboard, MdPowerSettingsNew } from "react-icons/md";
 import { FaSwatchbook, FaUsers } from "react-icons/fa";
 import { BiSolidSpeaker } from "react-icons/bi";
-
+import "./admin.css"
 
 export default function AdminPage() {
   return (
-    <div className="w-full h-screen flex">
-      <div className="w-[4vw] h-full  flex flex-col justify-start  items-center text-[20px] gap-3 bg-gray-200">
+    <div className="w-full h-screen flex ">
+      <div className="w-[4vw] h-full  flex flex-col justify-start  items-center text-[20px] gap-3 backdrop-blur-md">
 
         <Link to="/admin/dashboard" className="mt-6 " data-tooltip-id="dashboard-tooltip">
-            <div className=" w-[3vw] h-[3vw] flex justify-center items-center bg-gray-200 text-black hover:bg-gray-600 hover:text-white text-[1.8vw] duration-500 rounded-2xl">
+            <div className="icon duration-600">
                 <MdDashboard />
             </div>
         </Link>
         <Tooltip id="dashboard-tooltip" place="right" content="Go to Dashboard" />
 
         <Link to="/admin/bookings"  data-tooltip-id="bookings-tooltip">
-            <div className=" w-[3vw] h-[3vw] flex justify-center items-center bg-gray-200 text-black hover:bg-gray-600 hover:text-white text-[1.8vw] duration-500 rounded-2xl">
+            <div className=" icon duration-600">
                 <FaSwatchbook />
             </div>
         </Link>
         <Tooltip id="bookings-tooltip" place="right" content="View Bookings" />
 
         <Link to="/admin/items"  data-tooltip-id="items-tooltip">
-            <div className=" w-[3vw] h-[3vw] flex justify-center items-center bg-gray-200 text-black hover:bg-gray-600 hover:text-white text-[1.8vw] duration-500 rounded-2xl">
+            <div className=" icon duration-600">
                 <BiSolidSpeaker/>
             </div>
         </Link>
         <Tooltip id="items-tooltip" place="right" content="Manage Items" />
 
         <Link to="/admin/users"  data-tooltip-id="users-tooltip">
-            <div className=" w-[3vw] h-[3vw] flex justify-center items-center bg-gray-200 text-black hover:bg-gray-600 hover:text-white text-[1.8vw] duration-500 rounded-2xl">
+            <div className=" icon duration-600">
                 <FaUsers/>
             </div>
         </Link>
@@ -40,7 +40,7 @@ export default function AdminPage() {
 
         
         <Link to="/" className="absolute bottom-5">
-            <div className="mt-5 w-[3vw] h-[3vw] flex justify-center items-center bg-gray-200 text-black hover:bg-gray-600 hover:text-white text-[1.8vw] duration-500 rounded-3xl  ">
+            <div className=" icon duration-600 " id="logout">
                 <MdPowerSettingsNew />
             </div>
         </Link>
