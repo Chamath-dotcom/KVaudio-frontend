@@ -1,6 +1,6 @@
 import { useState } from "react"
 import LoginBtn from "../home/loginBtn/loginBtn";
-
+import './admin.css'
 export default function AddItem(){
     const [prod_key,setProd_key] = useState("");
     const [prod_name,setProd_name] = useState("");
@@ -10,8 +10,8 @@ export default function AddItem(){
     const [prod_description,setProd_description] = useState("");
     const [prod_availability,setProd_availability] = useState("");
     return(
-        <div className=" border w-[96vw] h-[100vh] flex  justify-center items-center overflow-hidden">
-            <div className="border w-[80vw] h-[90vh] relative rounded-3xl right-10">
+        <div className="  w-[96vw] h-[100vh] flex  justify-center items-center overflow-hidden  relative">
+            <div className=" w-[80vw] h-[90vh] relative rounded-3xl right-10 backdrop-blur-2xl" >
             <form >
                 <div className="  flex w-[40vw] h-[60vh] flex-col justify-center gap-8 items-center"> 
                 <input 
