@@ -1,7 +1,7 @@
-import { HiH1 } from "react-icons/hi2"
+
+
+
 import { Link, Route, Routes, useNavigate } from "react-router-dom"
-import AddItem from "./additem"
-import { CiCirclePlus } from "react-icons/ci"
 import { IoAddCircle } from "react-icons/io5"
 
 

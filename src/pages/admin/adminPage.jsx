@@ -9,7 +9,7 @@ import AddItem from "./additem";
 
 export default function AdminPage() {
   return (
-    <div className="w-full h-screen flex overflow-hidden backg">
+    <div className="w-full h-screen flex overflow-hidden backg ">
       <div className="w-[4vw] h-full  flex flex-col justify-start  items-center text-[20px] gap-3 backdrop-blur-2xl z-20">
 
         <Link to="/admin/" className="mt-6 " data-tooltip-id="dashboard-tooltip">
