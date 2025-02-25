@@ -10,9 +10,9 @@ import AddItem from "./additem";
 export default function AdminPage() {
   return (
     <div className="w-full h-screen flex overflow-hidden backg">
-      <div className="w-[4vw] h-full  flex flex-col justify-start  items-center text-[20px] gap-3 backdrop-blur-2xl">
+      <div className="w-[4vw] h-full  flex flex-col justify-start  items-center text-[20px] gap-3 backdrop-blur-2xl z-20">
 
-        <Link to="/admin/dashboard" className="mt-6 " data-tooltip-id="dashboard-tooltip">
+        <Link to="/admin/" className="mt-6 " data-tooltip-id="dashboard-tooltip">
             <div className="icon duration-600">
                 <MdDashboard />
             </div>
@@ -52,7 +52,7 @@ export default function AdminPage() {
       {/* Main Content */}
       <div className="w-[calc(100vw-10vw)] ">
         <Routes>
-          <Route path="/dashboard" element={<h1>Dashboard</h1>} />
+          <Route path="/" element={<h1>Dashboard</h1>} />
           <Route path="/bookings" element={<h1>Bookings</h1>} />
           <Route path="/items" element={<AdminItem/>} />
           <Route path="/items/add" element={<AddItem/>} />

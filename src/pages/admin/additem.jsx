@@ -1,6 +1,7 @@
 import { useState } from "react"
 import LoginBtn from "../home/loginBtn/loginBtn";
 import './admin.css'
+import { Link } from "react-router-dom";
 export default function AddItem(){
     const [prod_key,setProd_key] = useState("");
     const [prod_name,setProd_name] = useState("");
@@ -33,7 +34,7 @@ export default function AddItem(){
                     placeholder="price"
                     value={prod_price}
                     onChange={(e)=>setProd_price(e.target.value)}
-                    className="w-[25vw] h-[3.4vh] border rounded-md pl-3"
+                    className="w-[25vw] h-[3.4vh]  border p-2 rounded-md pl-3"
                 />
                 <select
                     value={prod_category}
@@ -60,7 +61,9 @@ export default function AddItem(){
                 </div>
                 <div className=" w-[80vw] h-[30vh] flex justify-center">
                     <div className="relative right-20 top-10">
-                    <LoginBtn text="ADD"/>
+                    <Link to={"/admin/items"}>
+                        <LoginBtn text="ADD"/>
+                    </Link>
                     </div>
                 </div>
             
