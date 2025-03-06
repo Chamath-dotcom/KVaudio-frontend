@@ -12,7 +12,7 @@ export default function LoginBtn({ text = "LOGIN", onClick }) {
     };
     return(
         <div  >
-        <button className='rounded-2xl  ' onClick={handleClick} >
+        <button className='loginbtn rounded-2xl  ' onClick={handleClick} >
             <span>{text}</span>
             <div className="wave "></div>
         </button>
