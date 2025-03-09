@@ -25,20 +25,19 @@ export default function AdminItem(){
     const [itemloaded, setItemloaded] = useState(false);
     
     useEffect(() => {
-        const token = localStorage.getItem("token");
-        axios.get("http://localhost:5000/api/product/getproducts", {
+        if(!itemloaded) {
+            const token = localStorage.getItem("token");
+             axios.get("http://localhost:5000/api/product/getproducts", {
             headers: { Authorization: `Bearer ${token}` }
         }).then((res) => {
             console.log(res.data.message);
-            // Check if res.data.message is an array
-            if (Array.isArray(res.data.message)) {
-                setItems(res.data.message); // Use res.data.message instead of res.data
-            } else {
-                console.error("Expected an array but got:", res.data);
-            }
+            setItems(res.data.message); // Use res.data.message instead of res.data
+            setItemloaded(true);
         }).catch((err) => {
             console.log(err);
         });
+        }
+        
     }, [itemloaded]);
 
     const handleDelete = (key) => {
@@ -52,7 +51,7 @@ export default function AdminItem(){
                 })
                 .then((res) => {
                     console.log(res.data);
-                   setItemloaded(itemloaded);
+                   setItemloaded(false);
                 })
                 .catch((err) => {
                     console.error(err);
@@ -61,16 +60,20 @@ export default function AdminItem(){
     };
     
     return(
-    <div className="w-[96vw] h-[100vh] flex flex-col justify-start items-center relative">
-
-           <div className="  w-[90vw] h-[100vh] flex flex-col justify-start items-center relative right-10">
+    <div className="w-[96vw] h-[100vh]  ">
+            {! itemloaded && ( 
+            <div className="  w-[100vw] h-[5vw] flex items-center justify-center">
+				<section className="border-4 my-4 border-b-green-500 rounded-full animate-spin bg-0 w-[4vw] h-[4vw]"></section>
+              </div>
+             )} 
+           <div className="  w-[100vw] h-[calc(100vh-4vw)] flex flex-col justify-start items-center relative right-10 ">
             {/* Header Section */}
             <div className=" border w-[85vw] h-[6vh] flex justify-center items-center mt-3 mb-4 backdrop-blur-2xl p-4 rounded-lg ">
                 <h2 className="text-2xl font-semibold text-white">Admin Item List</h2>
             </div>
 
             {/* Table */}
-            <div className="overflow-x-auto overflow-y-auto backdrop-blur-2xl p-4 rounded-lg shadow-md text-black border relative left-10">
+            <div className="overflow-x-auto overflow-y-auto backdrop-blur-2xl p-4 rounded-lg shadow-md text-black border ">
                 <table className="w-[87vw] border-collapse border ">
                     <thead className="bg-gray-800">
                         <tr>
