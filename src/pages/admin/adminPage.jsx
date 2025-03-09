@@ -6,6 +6,7 @@ import { BiSolidSpeaker } from "react-icons/bi";
 import "./admin.css"
 import AdminItem from "./adminItem";
 import AddItem from "./additem";
+import UpdateItem from "./updateItem";
 
 export default function AdminPage() {
   return (
@@ -46,6 +47,7 @@ export default function AdminPage() {
                 <MdPowerSettingsNew />
             </div>
         </Link>
+        
 
       </div>
 
@@ -56,7 +58,7 @@ export default function AdminPage() {
           <Route path="/bookings" element={<h1>Bookings</h1>} />
           <Route path="/items" element={<AdminItem/>} />
           <Route path="/items/add" element={<AddItem/>} />
-          <Route path="/items/edit" element={<h1>Edit Item</h1>} />
+          <Route path="/items/edit" element={<UpdateItem/>} />
           <Route path="/users" element={<h1>Users</h1>} />
         </Routes>
       </div>

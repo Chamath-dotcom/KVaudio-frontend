@@ -101,7 +101,7 @@ export default function AdminItem(){
                                 <td className="p-1.5 border flex justify-around ">
                                     <button 
                                         onClick={() => {
-                                            navigate(`/admin/items/edit`, {state: product});
+                                            navigate(`/admin/items/edit`, {state:product});
                                         }} 
                                         className="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition cursor-pointer">
                                         <FaEdit className="inline mr-1" /> Edit
