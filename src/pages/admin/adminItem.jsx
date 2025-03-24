@@ -7,21 +7,7 @@ import './Item.css'
 
 export default function AdminItem(){
     const navigate = useNavigate();
-    
-    const sampleArr = [
-        {
-            prod_key: "P001",
-            name: "Wireless Headphones",
-            price: 99.99,
-            category: "audio",
-            dimensions: "20x15x5 cm",
-            description: "High-quality wireless headphones with noise cancellation.",
-            availability: true,
-            image: ["https://example.com/headphones.jpg"]
-        },
-    ];
-    
-    const [items, setItems] = useState(sampleArr);
+    const [items, setItems] = useState([]);
     const [itemloaded, setItemloaded] = useState(false);
     
     useEffect(() => {
