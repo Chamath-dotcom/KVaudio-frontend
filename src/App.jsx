@@ -4,7 +4,7 @@ import AdminPage from './pages/admin/adminPage';
 import HomePage from './pages/home/homePage';
 import Login from './pages/login/login';
 import { Toaster } from 'react-hot-toast';
-import Register from '../register/register';
+import Register from './pages/register/register';
 
 
 function App() {

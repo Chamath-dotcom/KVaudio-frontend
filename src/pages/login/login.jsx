@@ -74,8 +74,9 @@ export default function Login(){
                                 setPassword(e.target.value);
                             }}
                         />
-                        <button className="">
+                        <button className=""   onClick={() => navigate("/register")}>
                             <u>Create Account</u>
+                          
                         </button>
                         <div className="w-[15vw] h-[6vh]  flex justify-start absolute bottom-10">
                             <LoginBtn/>
