@@ -32,7 +32,7 @@ async function handleAddItem() {
     if (token) {
         try {
             const result = await axios.put(
-                "http://localhost:5000/api/product/updateProduct/"+prod_key,
+                `${import.meta.env.VITE_BACKEND_URL}/api/product/updateProduct/${prod_key}`,
                 {
                   
                     name: prod_name,

@@ -27,7 +27,7 @@ async function handleAddItem() {
     if (token) {
         try {
             const result = await axios.post(
-                "http://localhost:5000/api/product/addProduct",
+                `${import.meta.env.VITE_BACKEND_URL}/api/product/addProduct`,
                 {
                     prod_key: prod_key,
                     name: prod_name,

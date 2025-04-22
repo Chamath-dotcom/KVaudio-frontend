@@ -13,7 +13,7 @@ export default function AdminItem(){
     useEffect(() => {
         if(!itemloaded) {
             const token = localStorage.getItem("token");
-             axios.get("http://localhost:5000/api/product/getproducts", {
+             axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/product/getproducts`, {
             headers: { Authorization: `Bearer ${token}` }
         }).then((res) => {
             console.log(res.data.message);
@@ -32,7 +32,7 @@ export default function AdminItem(){
             setItems(items.filter((item) => item.prod_key !== key));
             const token = localStorage.getItem("token");
             axios
-                .delete(`http://localhost:5000/api/product/deleteProduct/${key}`, {
+                .delete(`${import.meta.env.VITE_BACKEND_URL}/api/product/deleteProduct/${key}`, {
                     headers: { Authorization: `Bearer ${token}` },
                 })
                 .then((res) => {

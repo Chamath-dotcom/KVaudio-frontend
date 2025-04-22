@@ -16,7 +16,7 @@ export default function Login(){
         console.log("Email:", email, "Password:", password);
 
         // send login request to backend here
-        axios.post("http://localhost:5000/api/users/login",
+        axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/users/login`,
             {
              email: email ,
              password: password
@@ -74,6 +74,9 @@ export default function Login(){
                                 setPassword(e.target.value);
                             }}
                         />
+                        <button className="">
+                            <u>Create Account</u>
+                        </button>
                         <div className="w-[15vw] h-[6vh]  flex justify-start absolute bottom-10">
                             <LoginBtn/>
                         </div>
